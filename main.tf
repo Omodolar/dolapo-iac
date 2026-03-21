@@ -42,3 +42,12 @@ resource "aws_subnet" "public-AZ1b" {
     Name = "dolapo-public-subnet-AZ1b"
   }
 }
+
+
+resource "aws_instance" "example" {
+  ami           = "ami-0647be98768d6b4cb" # us-east-1
+  instance_type = "t2.micro"
+  tags = {
+    Name = "dolapo-iac-project"
+  }
+}
